@@ -1,6 +1,7 @@
 package com.versys.autorevista;
 
 
+import android.annotation.SuppressLint;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.webkit.WebSettings;
@@ -11,7 +12,11 @@ import android.webkit.WebViewClient;
 
 public class MainActivity extends AppCompatActivity {
 
+    private WebView webView;
+    private String url;
+    private WebSettings webSettings;
 
+    @SuppressLint("SetJavaScriptEnabled")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
 
@@ -19,9 +24,9 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
 
-        String url = "https://www.auto-revista.com/";
-        WebView webView = (WebView) findViewById(R.id.webview);
-        WebSettings webSettings = webView.getSettings ();
+        url = "https://www.auto-revista.com/";
+        webView = findViewById(R.id.webview);
+        webSettings = webView.getSettings ();
 
         webView.setWebViewClient(new WebViewClient());
 
@@ -34,16 +39,24 @@ public class MainActivity extends AppCompatActivity {
         webSettings.setLoadWithOverviewMode (true);
         webSettings.setCacheMode (WebSettings.LOAD_NO_CACHE);
 
+
+
+
         webView.loadUrl(url);
 
 
-       if (webView.canGoBack()) {
+
+
+
+    }
+
+    @Override
+    public void onBackPressed() {
+        if (webView.canGoBack()) {
             webView.goBack();
         } else {
-            webView.getOriginalUrl();
+            super.onBackPressed();
         }
-
-
     }
 
 
