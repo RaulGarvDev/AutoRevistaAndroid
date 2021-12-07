@@ -8,6 +8,7 @@ import android.webkit.WebSettings;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
 
+import com.onesignal.OneSignal;
 
 
 public class MainActivity extends AppCompatActivity {
@@ -15,6 +16,7 @@ public class MainActivity extends AppCompatActivity {
     private WebView webView;
     private String url;
     private WebSettings webSettings;
+    private static final String one = "90c87cdd-57c1-4dca-806e-ef31a4c1cd03";
 
     @SuppressLint("SetJavaScriptEnabled")
     @Override
@@ -22,6 +24,13 @@ public class MainActivity extends AppCompatActivity {
 
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        // Enable verbose OneSignal logging to debug issues if needed.
+        OneSignal.setLogLevel(OneSignal.LOG_LEVEL.VERBOSE, OneSignal.LOG_LEVEL.NONE);
+
+        // OneSignal Initialization
+
+        OneSignal.initWithContext(this);
+        OneSignal.setAppId(one);
 
 
         url = "https://www.auto-revista.com/";

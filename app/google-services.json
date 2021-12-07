@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "95001871134",
+    "project_id": "auto-revista",
+    "storage_bucket": "auto-revista.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:95001871134:android:a96fcdb55e79860260bf0f",
+        "android_client_info": {
+          "package_name": "com.versys.autorevista"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "95001871134-08ps7gftrgnm9hgdkssbou3lpk4qit09.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDwDOm5PCwD8PieHSi1-ExJMI3rCYEmZbQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "95001871134-08ps7gftrgnm9hgdkssbou3lpk4qit09.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
