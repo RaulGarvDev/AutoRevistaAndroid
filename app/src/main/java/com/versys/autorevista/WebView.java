@@ -5,15 +5,14 @@ import android.annotation.SuppressLint;
 import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import android.webkit.WebSettings;
-import android.webkit.WebView;
 import android.webkit.WebViewClient;
 
 import com.onesignal.OneSignal;
 
 
-public class MainActivity extends AppCompatActivity {
+public class WebView extends AppCompatActivity {
 
-    private WebView webView;
+    private android.webkit.WebView webView;
     private String url;
     private WebSettings webSettings;
     private static final String one = "90c87cdd-57c1-4dca-806e-ef31a4c1cd03";
@@ -23,7 +22,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
 
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_webview);
         // Enable verbose OneSignal logging to debug issues if needed.
         OneSignal.setLogLevel(OneSignal.LOG_LEVEL.VERBOSE, OneSignal.LOG_LEVEL.NONE);
 

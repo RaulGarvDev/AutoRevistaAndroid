@@ -15,7 +15,7 @@
             android:name=".Menu_Botones"
             android:exported="false" />
         <activity
-            android:name=".MainActivity"
+            android:name=".WebView"
             android:exported="false" />
         <activity
             android:name=".splash_activity"
