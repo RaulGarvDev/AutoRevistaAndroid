@@ -18,7 +18,7 @@ public class splash_activity extends AppCompatActivity {
         TimerTask tarea = new TimerTask() {
             @Override
             public void run() {
-                Intent intent = new Intent(splash_activity.this, MainActivity.class);
+                Intent intent = new Intent(splash_activity.this, Menu_Botones.class);
                 startActivity(intent);
                 finish();
             }
